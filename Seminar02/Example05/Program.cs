@@ -8,7 +8,7 @@
 *  8,  9  ->  нет                                                      *
 ************************************************************************/
 Console.WriteLine("Enter two numbers separated by a space");
-string[] strArray = Console.ReadLine().Split(' '); 
+string[] strArray = (Console.ReadLine() ?? "").Split(' '); 
 
 int num1 = Convert.ToInt32(strArray[0]);
 int num2 = Convert.ToInt32(strArray[1]);
