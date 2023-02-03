@@ -4,14 +4,14 @@
 3  -> 11
 2  -> 10
 */
-int[] GetBinaryArray(int[] data)
+int[] GetBinaryArray(int[] data, int number)
 {
     int index = 0;
-    while(num > 0)
+    while(number > 0)
     {
-        arr[index++] = num % 2;
+        data[index++] = number % 2;
         //if(num % 2 == 1) num -= 1;
-        num /= 2;      
+        number /= 2;      
     }
     return data;
 }
@@ -31,5 +31,5 @@ void PrintBinary(int[] data)
 int[] arr = new int[32]; // max length for integer in binary
 Console.Write("Enter your number: ");
 int num = Convert.ToInt32(Console.ReadLine()); 
-arr = GetBinaryArray(arr);
+arr = GetBinaryArray(arr, num);
 PrintBinary(arr);
